@@ -49,7 +49,6 @@
       overflow-x:hidden;
     }
 
-    /* Ambient wave layers */
     .bg-wrap{
       position:fixed;
       inset:0;
@@ -271,7 +270,7 @@
 
     .cards{
       display:grid;
-      grid-template-columns: 1fr; /* ปรับให้ขยายเต็มความยาวเท่าการ์ดด้านบน */
+      grid-template-columns: 1fr;
       gap:18px;
     }
     @media (max-width: 820px){
@@ -436,7 +435,7 @@
       text-align:center;
       color:var(--muted);
       font-size:13px;
-      padding:16px 0 0; /* เพิ่ม Space ด้านบนของฟุตเตอร์เล็กน้อยเพื่อความสวยงาม */
+      padding:16px 0 0;
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -561,7 +560,6 @@
 
     setTheme(storedTheme);
 
-    // update auto theme if OS theme changes
     window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
       if ((localStorage.getItem('blackz-theme') || 'dark') === 'auto') setTheme('auto');
     });
